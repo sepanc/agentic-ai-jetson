@@ -215,4 +215,4 @@ For questions or issues, please open an issue on GitHub.
 
 ---
 
-*Last updated: 2024*
+*Last updated: January, 2026*
