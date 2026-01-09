@@ -212,3 +212,7 @@ For questions or issues, please open an issue on GitHub.
 ---
 
 **Note**: This is a development version optimized for Python 3.12 and the latest LangChain libraries. Ensure all dependencies are up to date for best performance.
+
+---
+
+*Last updated: 2024*
