@@ -28,7 +28,8 @@ RUN mkdir -p /app/data/chroma_db /app/data/knowledge_base /app/data/deployment_m
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
-ENV OLLAMA_BASE_URL=http://192.168.40.100:11434
+# Override at runtime: -e OLLAMA_BASE_URL=http://your-ollama-host:11434
+ENV OLLAMA_BASE_URL=http://localhost:11434
 ENV OLLAMA_MODEL=llama3.2:3b
 ENV CHROMA_PERSIST_DIR=/app/data/chroma_db
 ENV KNOWLEDGE_BASE_DIR=/app/data/knowledge_base

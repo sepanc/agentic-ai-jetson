@@ -23,9 +23,12 @@ ailearn/
     ├── project2-react-agent/         # ReAct agent (tools + loop detection)
     │   └── README.md
     ├── project3-multi-tool/          # Multi-tool ReAct
-    ├── project4-multi-agent/          # Multi-agent
-    ├── project5-integration/          # Integration
-    └── project6-research-agent/       # Multi-source research (LangGraph)
+    │   └── README.md
+    ├── project4-multi-agent/         # Multi-agent
+    │   └── README.md
+    ├── project5-integration/         # Integration
+    │   └── README.md
+    └── project6-research-agent/     # Multi-source research (LangGraph)
         └── README.md
 ```
 
@@ -36,6 +39,9 @@ ailearn/
 | RAG Agent | [week1/ragproject](week1/ragproject/README.md) | PDF → vector store → QA with Ollama and source attribution |
 | Structured Output | [week2/project1-structured-output](week2/project1-structured-output/README.md) | Pydantic-validated JSON from LLM with retry logic |
 | ReAct Agent | [week2/project2-react-agent](week2/project2-react-agent/README.md) | Thought–Action–Observation agent with calculator, search, datetime, web_search |
+| Multi-Tool ReAct | [week2/project3-multi-tool](week2/project3-multi-tool/README.md) | ReAct agent with extended tool set and optional model comparison |
+| Multi-Agent | [week2/project4-multi-agent](week2/project4-multi-agent/README.md) | Research → Analysis → Report multi-agent workflow |
+| Integration | [week2/project5-integration](week2/project5-integration/README.md) | Combined multi-agent + multi-tool pipeline |
 | Research Agent | [week2/project6-research-agent](week2/project6-research-agent/README.md) | LangGraph research pipeline: vector + arXiv + web + file search → report |
 
 ## Setup

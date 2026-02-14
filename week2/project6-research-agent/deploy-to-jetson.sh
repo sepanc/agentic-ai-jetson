@@ -1,12 +1,18 @@
 #!/bin/bash
 
 # Deployment script for Jetson Orin Nano
+# Set JETSON_IP and JETSON_USER in environment or edit below.
 set -e
 
-JETSON_IP="192.168.40.100"
-JETSON_USER="senthil"
+JETSON_IP="${JETSON_IP:-}"
+JETSON_USER="${JETSON_USER:-}"
 PROJECT_NAME="research-agent"
 JETSON_PATH="/ssd/projects/$PROJECT_NAME"
+
+if [ -z "$JETSON_IP" ] || [ -z "$JETSON_USER" ]; then
+  echo "Set JETSON_IP and JETSON_USER (e.g. export JETSON_IP=192.168.1.100 JETSON_USER=ubuntu)"
+  exit 1
+fi
 
 echo "========================================"
 echo "Deploying Research Agent to Jetson"
