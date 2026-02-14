@@ -1,0 +1,223 @@
+[
+  {
+    "model": "llama3.2:3b",
+    "scenario": "Simple Math",
+    "success": true,
+    "steps": 4,
+    "tools_used": [
+      "calculator",
+      "search_document",
+      "search_document",
+      "search_document"
+    ],
+    "categories": [
+      "information",
+      "computation"
+    ],
+    "has_loop": true,
+    "time_seconds": 9.02,
+    "final_answer": "Based on available information: No documents found matching 'percentage'"
+  },
+  {
+    "model": "llama3.2:3b",
+    "scenario": "Database \u2192 File",
+    "success": true,
+    "steps": 2,
+    "tools_used": [
+      "database_query",
+      "file_write"
+    ],
+    "categories": [
+      "database",
+      "file_ops"
+    ],
+    "has_loop": false,
+    "time_seconds": 3.38,
+    "final_answer": "Successfully wrote 1 characters to test_customers.txt"
+  },
+  {
+    "model": "llama3.2:3b",
+    "scenario": "Multi-Step Planning",
+    "success": false,
+    "steps": 7,
+    "tools_used": [
+      "get_datetime",
+      "calculator",
+      "calculator",
+      "get_datetime",
+      "calculator",
+      "calculator",
+      "calculator"
+    ],
+    "categories": [
+      "information",
+      "computation"
+    ],
+    "has_loop": true,
+    "time_seconds": 18.53,
+    "final_answer": "Unable to complete task - all tool calls failed"
+  },
+  {
+    "model": "llama3.2:3b",
+    "scenario": "API \u2192 Calculator",
+    "success": true,
+    "steps": 5,
+    "tools_used": [
+      "api_call",
+      "calculator",
+      "file_read",
+      "file_read",
+      "file_read"
+    ],
+    "categories": [
+      "api",
+      "computation",
+      "file_ops"
+    ],
+    "has_loop": true,
+    "time_seconds": 8.14,
+    "final_answer": "Based on available information: 0.7559633027522936"
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "Simple Math",
+    "success": true,
+    "steps": 1,
+    "tools_used": [
+      "calculator"
+    ],
+    "categories": [
+      "computation"
+    ],
+    "has_loop": false,
+    "time_seconds": 16.85,
+    "final_answer": ""
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "Database \u2192 File",
+    "success": true,
+    "steps": 2,
+    "tools_used": [
+      "database_query",
+      "file_write"
+    ],
+    "categories": [
+      "database",
+      "file_ops"
+    ],
+    "has_loop": false,
+    "time_seconds": 6.57,
+    "final_answer": "Successfully wrote 0 characters to test_customers.txt"
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "Multi-Step Planning",
+    "success": false,
+    "steps": 4,
+    "tools_used": [
+      "get_datetime",
+      "calculator",
+      "calculator",
+      "calculator"
+    ],
+    "categories": [
+      "information",
+      "computation"
+    ],
+    "has_loop": true,
+    "time_seconds": 14.77,
+    "final_answer": "Unable to complete task - all tool calls failed"
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "API \u2192 Calculator",
+    "success": true,
+    "steps": 5,
+    "tools_used": [
+      "api_call",
+      "database_query",
+      "calculator",
+      "file_write",
+      "file_write"
+    ],
+    "categories": [
+      "api",
+      "database",
+      "computation",
+      "file_ops"
+    ],
+    "has_loop": false,
+    "time_seconds": 23.42,
+    "final_answer": ""
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "Simple Math",
+    "success": true,
+    "steps": 1,
+    "tools_used": [
+      "calculator"
+    ],
+    "categories": [
+      "computation"
+    ],
+    "has_loop": false,
+    "time_seconds": 12.76,
+    "final_answer": ""
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "Database \u2192 File",
+    "success": true,
+    "steps": 2,
+    "tools_used": [
+      "database_query",
+      "file_write"
+    ],
+    "categories": [
+      "database",
+      "file_ops"
+    ],
+    "has_loop": false,
+    "time_seconds": 11.12,
+    "final_answer": "Successfully wrote 153 characters to test_customers.txt"
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "Multi-Step Planning",
+    "success": false,
+    "steps": 5,
+    "tools_used": [
+      "get_datetime",
+      "calculator",
+      "get_datetime",
+      "get_datetime",
+      "get_datetime"
+    ],
+    "categories": [
+      "information",
+      "computation"
+    ],
+    "has_loop": true,
+    "time_seconds": 15.52,
+    "final_answer": "Unable to complete task - all tool calls failed"
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "API \u2192 Calculator",
+    "success": true,
+    "steps": 2,
+    "tools_used": [
+      "api_call",
+      "calculator"
+    ],
+    "categories": [
+      "api",
+      "computation"
+    ],
+    "has_loop": false,
+    "time_seconds": 11.49,
+    "final_answer": ""
+  }
+]

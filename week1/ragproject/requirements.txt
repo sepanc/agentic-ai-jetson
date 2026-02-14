@@ -1,0 +1,10 @@
+langchain
+langchain-huggingface
+langchain-community
+langchain-ollama
+langchain-core
+chromadb
+sentence-transformers
+pypdf
+python-dotenv
+rich

@@ -1,0 +1,25 @@
+{
+    "regulatory_compliance": {
+      "FERPA": {
+        "requirement": "Student data must remain on-premises",
+        "edge_advantage": true,
+        "cloud_risk": "Data transmission to third-party servers"
+      },
+      "COPPA": {
+        "requirement": "K-12 student data protection",
+        "edge_advantage": true,
+        "cloud_risk": "Parental consent for cloud processing"
+      }
+    },
+    "budget_constraints": {
+      "typical_k12_budget": "$5000-15000 per year for technology",
+      "cloud_api_costs": "$300-800/month for 500 students",
+      "edge_one_time": "$500-2000 upfront",
+      "edge_monthly": "$0 (electricity ~$2-5/month)"
+    },
+    "network_reality": {
+      "rural_schools": "50% have <25Mbps",
+      "urban_schools": "80% have >100Mbps",
+      "offline_requirement": "Must function during outages"
+    }
+  }

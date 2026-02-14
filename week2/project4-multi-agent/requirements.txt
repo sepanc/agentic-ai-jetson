@@ -1,0 +1,6 @@
+# From pyproject.toml; use pip install -r requirements.txt or: uv sync / pip install -e .
+langchain-core>=1.2.7
+langchain-ollama>=1.0.1
+langgraph>=1.0.7
+pydantic>=2.12.5
+duckduckgo-search>=6.3.0

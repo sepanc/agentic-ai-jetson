@@ -1,0 +1,31 @@
+# Core LangChain (keep versions for compatibility)
+langchain>=0.2.0,<0.3.0
+langchain-community>=0.2.0,<0.3.0
+langchain-core>=0.2.0,<0.3.0
+langgraph>=0.2.0,<0.3.0
+
+# Vector store
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# Data validation (strict - Pydantic v2)
+pydantic>=2.8.0,<3.0.0
+pydantic-settings>=2.4.0,<3.0.0
+
+# APIs
+arxiv>=2.0.0
+httpx>=0.27.0
+
+# LLM
+ollama>=0.3.0
+
+# Data processing
+pypdf>=4.0.0
+python-dotenv>=1.0.0
+
+# Utilities
+requests>=2.32.0
+
+# Async support (no version pin - let pip find compatible version)
+aiohttp
+aiohappyeyeballs

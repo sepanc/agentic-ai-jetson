@@ -1,0 +1,239 @@
+[
+  {
+    "model": "llama3.2:3b",
+    "scenario": "Simple Math",
+    "success": false,
+    "steps": 3,
+    "tools_used": [
+      "calculator",
+      "calculator",
+      "calculator"
+    ],
+    "categories": [
+      "computation"
+    ],
+    "has_loop": true,
+    "time_seconds": 8.34,
+    "final_answer": "Unable to complete task - all tool calls failed",
+    "answer_length": 47,
+    "answer_complete": true,
+    "pattern_match": false
+  },
+  {
+    "model": "llama3.2:3b",
+    "scenario": "Database \u2192 File",
+    "success": true,
+    "steps": 1,
+    "tools_used": [
+      "file_write"
+    ],
+    "categories": [
+      "file_ops"
+    ],
+    "has_loop": false,
+    "time_seconds": 1.5,
+    "final_answer": "Successfully wrote 52 characters to customers.txt",
+    "answer_length": 49,
+    "answer_complete": true,
+    "pattern_match": true
+  },
+  {
+    "model": "llama3.2:3b",
+    "scenario": "Multi-Step Planning",
+    "success": true,
+    "steps": 4,
+    "tools_used": [
+      "search_document",
+      "get_datetime",
+      "get_datetime",
+      "get_datetime"
+    ],
+    "categories": [
+      "information"
+    ],
+    "has_loop": true,
+    "time_seconds": 5.32,
+    "final_answer": "Based on available information: [exam_info]: The NCP-AAI certification exam is scheduled for February 21, 2026.\n    The exam covers 5 modules and cost",
+    "answer_length": 157,
+    "answer_complete": true,
+    "pattern_match": true
+  },
+  {
+    "model": "llama3.2:3b",
+    "scenario": "API \u2192 Calculator",
+    "success": true,
+    "steps": 3,
+    "tools_used": [
+      "api_call",
+      "api_call",
+      "api_call"
+    ],
+    "categories": [
+      "api"
+    ],
+    "has_loop": true,
+    "time_seconds": 4.84,
+    "final_answer": "Based on available information: {\n  \"total_users\": 545,\n  \"active_users\": 412,\n  \"conversion_rate\": 0.756,\n  \"revenue\": 125000\n}",
+    "answer_length": 128,
+    "answer_complete": true,
+    "pattern_match": true
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "Simple Math",
+    "success": true,
+    "steps": 1,
+    "tools_used": [
+      "calculator"
+    ],
+    "categories": [
+      "computation"
+    ],
+    "has_loop": false,
+    "time_seconds": 12.98,
+    "final_answer": "22.0",
+    "answer_length": 4,
+    "answer_complete": false,
+    "pattern_match": true
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "Database \u2192 File",
+    "success": true,
+    "steps": 2,
+    "tools_used": [
+      "database_query",
+      "file_write"
+    ],
+    "categories": [
+      "database",
+      "file_ops"
+    ],
+    "has_loop": false,
+    "time_seconds": 9.15,
+    "final_answer": "Successfully wrote 118 characters to test_customers.txt",
+    "answer_length": 55,
+    "answer_complete": true,
+    "pattern_match": true
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "Multi-Step Planning",
+    "success": false,
+    "steps": 4,
+    "tools_used": [
+      "get_datetime",
+      "calculator",
+      "calculator",
+      "calculator"
+    ],
+    "categories": [
+      "information",
+      "computation"
+    ],
+    "has_loop": true,
+    "time_seconds": 14.31,
+    "final_answer": "Unable to complete task - all tool calls failed",
+    "answer_length": 47,
+    "answer_complete": true,
+    "pattern_match": false
+  },
+  {
+    "model": "llama3.1:8b",
+    "scenario": "API \u2192 Calculator",
+    "success": true,
+    "steps": 2,
+    "tools_used": [
+      "api_call",
+      "calculator"
+    ],
+    "categories": [
+      "computation",
+      "api"
+    ],
+    "has_loop": false,
+    "time_seconds": 10.64,
+    "final_answer": "75.59633027522936",
+    "answer_length": 17,
+    "answer_complete": true,
+    "pattern_match": true
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "Simple Math",
+    "success": true,
+    "steps": 1,
+    "tools_used": [
+      "calculator"
+    ],
+    "categories": [
+      "computation"
+    ],
+    "has_loop": false,
+    "time_seconds": 13.53,
+    "final_answer": "22.0",
+    "answer_length": 4,
+    "answer_complete": false,
+    "pattern_match": true
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "Database \u2192 File",
+    "success": true,
+    "steps": 2,
+    "tools_used": [
+      "database_query",
+      "file_write"
+    ],
+    "categories": [
+      "database",
+      "file_ops"
+    ],
+    "has_loop": false,
+    "time_seconds": 9.94,
+    "final_answer": "Successfully wrote 153 characters to test_customers.txt",
+    "answer_length": 55,
+    "answer_complete": true,
+    "pattern_match": true
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "Multi-Step Planning",
+    "success": false,
+    "steps": 4,
+    "tools_used": [
+      "get_datetime",
+      "calculator",
+      "calculator",
+      "calculator"
+    ],
+    "categories": [
+      "information",
+      "computation"
+    ],
+    "has_loop": true,
+    "time_seconds": 18.96,
+    "final_answer": "Unable to complete task - all tool calls failed",
+    "answer_length": 47,
+    "answer_complete": true,
+    "pattern_match": false
+  },
+  {
+    "model": "qwen2.5:7b",
+    "scenario": "API \u2192 Calculator",
+    "success": true,
+    "steps": 1,
+    "tools_used": [
+      "api_call"
+    ],
+    "categories": [
+      "api"
+    ],
+    "has_loop": false,
+    "time_seconds": 6.45,
+    "final_answer": "The percentage of active users is 75.6%",
+    "answer_length": 39,
+    "answer_complete": true,
+    "pattern_match": true
+  }
+]

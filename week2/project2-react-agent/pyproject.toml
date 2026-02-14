@@ -1,0 +1,10 @@
+[project]
+name = "project2-react-agent"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-core>=1.2.7",
+    "langchain-ollama>=1.0.1",
+    "pydantic>=2.12.5",
+]

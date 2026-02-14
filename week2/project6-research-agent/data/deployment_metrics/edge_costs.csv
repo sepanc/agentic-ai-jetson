@@ -1,0 +1,6 @@
+deployment_type,device,monthly_cost_usd,initial_cost_usd,latency_ms,power_watts,use_case
+edge,Jetson Orin Nano,0,499,15,15,classroom_deployment
+edge,Jetson AGX Orin,0,1999,8,60,research_lab
+cloud,AWS g5.xlarge,350,0,120,N/A,scalable_workloads
+cloud,Azure NC6s_v3,450,0,100,N/A,enterprise_integration
+hybrid,Jetson+CloudBackup,50,499,20,15,resilient_education

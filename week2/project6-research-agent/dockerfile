@@ -1,0 +1,38 @@
+# Use NVIDIA L4T PyTorch base (ARM64 + CUDA support)
+FROM dustynv/l4t-pytorch:r36.4.0
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    wget \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first (for Docker layer caching)
+COPY requirements.txt .
+
+# Install Python dependencies
+# Note: sentence-transformers and chromadb should install from PyPI for ARM
+ENV PIP_INDEX_URL=https://pypi.org/simple
+RUN pip3 install --no-cache-dir -r requirements.txt
+# Copy application code
+COPY src/ ./src/
+COPY run_research.py .
+COPY data/ ./data/
+
+# Create directories for persistence
+RUN mkdir -p /app/data/chroma_db /app/data/knowledge_base /app/data/deployment_metrics
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV OLLAMA_BASE_URL=http://192.168.40.100:11434
+ENV OLLAMA_MODEL=llama3.2:3b
+ENV CHROMA_PERSIST_DIR=/app/data/chroma_db
+ENV KNOWLEDGE_BASE_DIR=/app/data/knowledge_base
+ENV METRICS_DIR=/app/data/deployment_metrics
+
+# Entrypoint
+ENTRYPOINT ["python3", "run_research.py"]

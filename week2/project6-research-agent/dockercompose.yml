@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  research-agent:
+    build: .
+    image: research-agent:jetson
+    container_name: research-agent
+    environment:
+      - OLLAMA_BASE_URL=http://192.168.40.100:11434
+      - OLLAMA_MODEL=llama3.2:3b
+      - SERPER_API_KEY=${SERPER_API_KEY}
+    volumes:
+      # Persist vector database
+      - ./data/chroma_db:/app/data/chroma_db
+      # Persist knowledge base
+      - ./data/knowledge_base:/app/data/knowledge_base
+      # Persist metrics data
+      - ./data/deployment_metrics:/app/data/deployment_metrics
+      # Mount output directory
+      - ./output:/app/output
+    network_mode: host
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    # Override entrypoint for interactive use
+    # command: "What are best practices for edge AI deployment?"
